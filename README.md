@@ -2,6 +2,8 @@
 
 > 🇫🇷 Français · [🇬🇧 English below](#english)
 
+**▶ Démo en ligne : https://valentin-auger-laboratoire.github.io/backoffice-officine/**
+
 > **Toutes les données sont fictives.** Le nom de la pharmacie, les comptes
 > utilisateurs, les grossistes, les numéros de facture, les codes CIP, les prix
 > et les stocks ont été inventés pour la démonstration. Les noms de médicaments
@@ -63,17 +65,18 @@ configuration.
 
 ### Démo web
 
-```bash
-flutter build web --release
-```
+La démo est en ligne sur
+**https://valentin-auger-laboratoire.github.io/backoffice-officine/**.
+Elle est servie par GitHub Pages depuis le dossier `docs/` de la branche `main`.
 
-Le dossier `build/web/` peut être publié tel quel sur n'importe quel
-hébergement statique. Pour GitHub Pages (site servi sous
-`/backoffice-officine/`) :
+Pour la mettre à jour après une modification :
 
 ```bash
 flutter build web --release --base-href /backoffice-officine/
 ```
+
+puis remplacer le contenu de `docs/` par celui de `build/web/`, en gardant le
+fichier vide `docs/.nojekyll`, et faire un commit.
 
 > La version web fonctionne parce que l'état de l'application est en mémoire.
 > La couche SQLite (`sqflite`) n'est pas disponible sur le web ; elle est
@@ -155,6 +158,8 @@ lib/
 
 > 🇬🇧 English · [🇫🇷 Français plus haut](#back-office-officine--poc-flutter)
 
+**▶ Live demo: https://valentin-auger-laboratoire.github.io/backoffice-officine/**
+
 > **All data is fictitious.** The pharmacy name, user accounts, wholesalers,
 > invoice numbers, CIP codes, prices and stock levels were made up for the
 > demo. Drug names are only used as examples of common pharmacy items.
@@ -212,16 +217,18 @@ The app starts straight away with the demo dataset, no configuration needed.
 
 ### Web demo
 
-```bash
-flutter build web --release
-```
+The demo is live at
+**https://valentin-auger-laboratoire.github.io/backoffice-officine/**.
+It is served by GitHub Pages from the `docs/` folder of the `main` branch.
 
-The `build/web/` folder can be deployed as is to any static host. For GitHub
-Pages (site served under `/backoffice-officine/`):
+To update it after a change:
 
 ```bash
 flutter build web --release --base-href /backoffice-officine/
 ```
+
+then replace the contents of `docs/` with those of `build/web/`, keeping the
+empty `docs/.nojekyll` file, and commit.
 
 > The web version works because the app state is kept in memory. The SQLite
 > layer (`sqflite`) is not available on the web; it targets mobile and
